@@ -13,9 +13,9 @@ spec:
       project: roboshop
       purpose: ingress-demo
       app: app1
-    template:
-      metadata:
-        labels:
+  template:
+    metadata:
+      labels:
           project: roboshop
           purpose: ingress-demo
           app: app1
