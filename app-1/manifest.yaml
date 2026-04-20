@@ -2,22 +2,26 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app1
+  # these are replica set labels
   labels:
-    project: roboshop
     purpose: ingress-demo
+    project: roboshop
     app: app1
-  spec:
-    replicas: 2
-    selector:
-      matchLabels:
-        project: roboshop
-        purpose: ingress-demo
-        app: app1
+spec:
+  replicas: 2
+  selector:
+    # these labels are used to select pods
+    matchLabels:
+      purpose: ingress-demo
+      project: roboshop
+      app: app1
+  # pod definition
   template:
     metadata:
-      selector:
-        project: roboshop
+      labels:
+        # purpose: dp-demo
         purpose: ingress-demo
+        project: roboshop
         app: app1
     spec:
       containers:
