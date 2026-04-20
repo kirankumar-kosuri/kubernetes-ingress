@@ -47,6 +47,7 @@ metadata:
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:396199428170:certificate/1039818d-3829-41b8-80f5-c8b62d2f260d
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/tags: Environment=dev,Project=roboshop
+    alb.ingress.kubernetes.io/target-type: ip
     ingressClassName: alb
 spec:
   
