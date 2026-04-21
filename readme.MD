@@ -19,7 +19,7 @@ aws iam create-policy \
     --policy-document file://iam-policy.json
 ```
 
-4. Create Service Account and IAM Role and map the above policy
+4. Create Service Account and IAM Role and Map the above Policy
 ```
 eksctl create iamserviceaccount \
 --cluster=roboshop-dev \
