@@ -1,3 +1,4 @@
+# Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,6 +25,7 @@ spec:
         - name: app1
           image: kirankumarkosuri/app1:v1
 ---
+# Service
 apiVersion: v1
 kind: Service
 metadata:
@@ -38,6 +40,7 @@ spec:
     port: 80
     targetPort: 80
 ---
+# Ingress Controller
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
